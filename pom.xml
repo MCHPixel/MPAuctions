@@ -5,11 +5,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>mchpixel</groupId>
-  <artifactId>BestAuction</artifactId>
+  <artifactId>MPAuctions</artifactId>
   <version>1.0</version>
   <packaging>jar</packaging>
 
-  <name>BestAuction</name>
+  <name>MPAuctions</name>
 
   <properties>
     <java.version>1.8</java.version>
