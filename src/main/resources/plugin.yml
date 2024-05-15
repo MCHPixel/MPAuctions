@@ -1,0 +1,5 @@
+name: BestAuction
+version: '${project.version}'
+main: mchpixel.bestauction.BestAuction
+api-version: '1.20'
+load: STARTUP
