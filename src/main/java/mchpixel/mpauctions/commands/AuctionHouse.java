@@ -13,10 +13,11 @@ public class AuctionHouse implements CommandExecutor {
         if (!(sender instanceof Player)) {
             sender.sendMessage("Only players can use this command.");
             return true;
+        }else{
+            Player player = (Player) sender;
+            AuctionManage.openAuctionHouse(player);
+            return true;
         }
 
-        Player player = (Player) sender;
-        AuctionManage.openAuctionHouse(player);
-        return true;
     }
 }
