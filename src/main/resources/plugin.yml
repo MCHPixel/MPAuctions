@@ -7,3 +7,5 @@ load: STARTUP
 authors: [MCHPixel]
 description: This is the MPAuctions Plugin
 website: https://github.com/MCHPixel/MPAuctions
+
+commands:
