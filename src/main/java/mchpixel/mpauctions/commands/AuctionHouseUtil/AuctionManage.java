@@ -7,6 +7,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.InventoryView;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -21,7 +22,7 @@ public class AuctionManage implements Listener {
         this.plugin = plugin;
     }
 
-    public static void openAuctionHouse(Player player) {
+    public static void openAuctionhouse(Player player) {
         Inventory inv = Bukkit.createInventory(null, 27, "Page 1");
 
         ItemStack item = new ItemStack(Material.DIAMOND);
@@ -37,11 +38,12 @@ public class AuctionManage implements Listener {
     }
 
     @EventHandler
-    public void onInventoryClick(InventoryClickEvent event) {
-        if (event.getClickedInventory() != null && event.getClickedInventory().getHolder() instanceof Player) {
-            if (event.getClickedInventory().getType().equals("Page 1")) {
-                event.setCancelled(true);
-            }
+    public void onClick(InventoryClickEvent event, ItemStack clickedItem) {
+        InventoryView view = event.getView();
+        ItemStack item = event.getCurrentItem();
+
+        if (view.getTitle().equals("Page 1")) {
+            event.setCancelled(true);
         }
     }
 }
