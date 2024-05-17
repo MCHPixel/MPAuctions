@@ -15,7 +15,7 @@ public class AuctionHouse implements CommandExecutor {
             return true;
         }else{
             Player player = (Player) sender;
-            AuctionManage.openAuctionHouse(player);
+            AuctionManage.openAuctionhouse(player);
             return true;
         }
 
